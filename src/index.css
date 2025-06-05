@@ -4,89 +4,112 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Doraemon Core Palette */
+    --doraemon-blue: 200 85% 50%; /* Doraemon's primary blue */
+    --doraemon-red: 0 90% 55%;   /* Bell, accents, destructive */
+    --doraemon-yellow: 50 100% 60%; /* Bell, highlights */
+    --doraemon-yellow-foreground: 220 25% 20%; /* Dark text for yellow bg */
+    --doraemon-sky-blue: 190 70% 85%; /* Lighter blue for backgrounds/accents */
+    --doraemon-sky-blue-foreground: 220 25% 20%; /* Dark text for sky blue bg */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Theme Variables - Light Mode (Doraemon Themed) */
+    --background: 0 0% 100%;                     /* White */
+    --foreground: 220 25% 20%;                   /* Dark Slate Blue (for text on white) */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;                           /* White */
+    --card-foreground: var(--foreground);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;                        /* White */
+    --popover-foreground: var(--foreground);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--doraemon-blue);
+    --primary-foreground: 210 40% 98%;           /* Near White */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 210 20% 96%;                    /* Light Gray */
+    --secondary-foreground: var(--doraemon-blue); /* Doraemon Blue text on light gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 20% 92%;                        /* Lighter Gray */
+    --muted-foreground: 210 15% 50%;             /* Muted text color */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--doraemon-red);
+    --accent-foreground: 210 40% 98%;            /* Near White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: var(--doraemon-red);
+    --destructive-foreground: 210 40% 98%;       /* Near White */
 
-    --radius: 0.5rem;
+    --highlight: var(--doraemon-yellow);
+    --highlight-foreground: var(--doraemon-yellow-foreground);
 
-    --sidebar-background: 0 0% 98%;
+    --border: 210 15% 88%;                       /* Subtle Gray Border */
+    --input: 210 15% 88%;                        /* Subtle Gray Input Background */
+    --ring: var(--doraemon-blue);                /* Doraemon Blue for focus rings */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 0.625rem; /* 10px */
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Typography */
+    --font-sans: "Nunito", "Quicksand", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar - Light Mode */
+    --sidebar-background: 200 70% 97%;           /* Very Light Doraemon Blue tint */
+    --sidebar-foreground: 200 80% 40%;           /* Darker Doraemon Blue for text */
+    --sidebar-primary: var(--doraemon-red);      /* Doraemon Red for active items */
+    --sidebar-primary-foreground: 0 0% 100%;     /* White text on red */
+    --sidebar-accent: var(--doraemon-yellow);    /* Doraemon Yellow for highlights */
+    --sidebar-accent-foreground: var(--doraemon-yellow-foreground);
+    --sidebar-border: 200 60% 90%;               /* Subtle themed border */
+    --sidebar-ring: var(--doraemon-blue);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Doraemon Core Palette - Dark Mode Adjustments (Conceptual) */
+    --doraemon-blue-dark: 200 80% 60%;
+    --doraemon-red-dark: 0 85% 60%;
+    --doraemon-yellow-dark: 50 90% 65%;
+    --doraemon-yellow-foreground-dark: 220 30% 15%;
+    --doraemon-sky-blue-dark: 190 60% 30%;
+    --doraemon-sky-blue-foreground-dark: 210 30% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Theme Variables - Dark Mode (Deeper Blues/Grays) */
+    --background: 220 30% 15%;                   /* Dark Blue */
+    --foreground: 210 30% 90%;                   /* Light Gray/Blue text */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --card: 220 30% 20%;                         /* Slightly Lighter Dark Blue */
+    --card-foreground: var(--foreground);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover: 220 30% 20%;
+    --popover-foreground: var(--foreground);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --primary: var(--doraemon-blue-dark);
+    --primary-foreground: 220 30% 15%;           /* Dark text on lighter blue */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --secondary: 220 25% 25%;                    /* Dark Gray/Blue */
+    --secondary-foreground: var(--doraemon-blue-dark);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 220 25% 22%;
+    --muted-foreground: 210 20% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--doraemon-red-dark);
+    --accent-foreground: 210 30% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive: var(--doraemon-red-dark);
+    --destructive-foreground: 210 30% 95%;
+
+    --highlight: var(--doraemon-yellow-dark);
+    --highlight-foreground: var(--doraemon-yellow-foreground-dark);
+
+    --border: 220 20% 30%;
+    --input: 220 20% 30%;
+    --ring: var(--doraemon-blue-dark);
+
+    /* Sidebar - Dark Mode */
+    --sidebar-background: 220 30% 18%;           /* Darker blue base */
+    --sidebar-foreground: 200 70% 85%;           /* Lighter Doraemon Blue text */
+    --sidebar-primary: var(--doraemon-red-dark);
+    --sidebar-primary-foreground: 0 0% 95%;      /* Off-white text on red */
+    --sidebar-accent: var(--doraemon-yellow-dark);
+    --sidebar-accent-foreground: var(--doraemon-yellow-foreground-dark);
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: var(--doraemon-blue-dark);
   }
 }
 
@@ -97,5 +120,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
