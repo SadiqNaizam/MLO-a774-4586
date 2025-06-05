@@ -44,6 +44,10 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				highlight: {
+				    DEFAULT: 'hsl(var(--highlight))',
+				    foreground: 'hsl(var(--highlight-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -51,6 +55,30 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Doraemon Specific Colors (can be used directly if needed)
+				doraemon: {
+				    blue: 'hsl(var(--doraemon-blue))', // for light mode
+				    red: 'hsl(var(--doraemon-red))',   // for light mode
+				    yellow: {
+				        DEFAULT: 'hsl(var(--doraemon-yellow))', // for light mode
+				        foreground: 'hsl(var(--doraemon-yellow-foreground))'
+				    },
+				    skyBlue: {
+				        DEFAULT: 'hsl(var(--doraemon-sky-blue))', // for light mode
+				        foreground: 'hsl(var(--doraemon-sky-blue-foreground))'
+				    },
+				    // Dark mode variants (if you want to access them directly via Tailwind)
+				    blueDark: 'hsl(var(--doraemon-blue-dark))',
+				    redDark: 'hsl(var(--doraemon-red-dark))',
+				    yellowDark: {
+				        DEFAULT: 'hsl(var(--doraemon-yellow-dark))',
+				        foreground: 'hsl(var(--doraemon-yellow-foreground-dark))'
+				    },
+				    skyBlueDark: {
+				        DEFAULT: 'hsl(var(--doraemon-sky-blue-dark))',
+				        foreground: 'hsl(var(--doraemon-sky-blue-foreground-dark))'
+				    }
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -64,10 +92,13 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)',             // 10px
+				md: 'calc(var(--radius) - 2px)', // 8px
+				sm: 'calc(var(--radius) - 4px)'  // 6px
 			},
+			fontFamily: {
+                sans: ['var(--font-sans)'],
+            },
 			keyframes: {
 				'accordion-down': {
 					from: {
